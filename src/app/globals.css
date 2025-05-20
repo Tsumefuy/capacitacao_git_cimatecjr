@@ -5,15 +5,11 @@
   --secondary: #160440;
 }
 
-.bg-color {
-  background-color: var(--background);
-}
-
-.text-color-primary {
+.text-primary {
   color: var(--primary);
 }
 
-.text-color-secondary {
+.text-secondary {
   coolor: var(--secondary);
 }
 
