@@ -1,5 +1,22 @@
 @import "tailwindcss";
 
+:root {
+  --primary: #08C952;
+  --secondary: #160440;
+}
+
+.bg-color {
+  background-color: var(--background);
+}
+
+.text-color-primary {
+  color: var(--primary);
+}
+
+.text-color-secondary {
+  coolor: var(--secondary);
+}
+
 html, body {
   background: #f2f2f2;
   font-family: Arial, Helvetica, sans-serif;
