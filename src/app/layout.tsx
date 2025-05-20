@@ -1,6 +1,9 @@
 import { Metadata } from "next";
 import "./globals.css";
 import { Tektur } from "next/font/google";
+
+import { Header } from "./components/header";
+
 const tektur = Tektur({ subsets: ["latin"], weight: ["400", "500", "600", "700"] });
 
 export const metadata: Metadata = {
@@ -23,6 +26,7 @@ export default function RootLayout({
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body className={`${tektur.className} overflow-x-hidden`}>
+        <Header/>
         {children}
       </body>
     </html>
