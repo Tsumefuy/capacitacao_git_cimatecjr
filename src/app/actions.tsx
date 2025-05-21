@@ -15,3 +15,8 @@ export async function fetchGunsHighligths() {
     const { data: guns } = await supabase.from('highlights').select();
     return guns;
 }
+
+export async function fetchGunsSearched(query: string) {
+    const { data: guns } = await supabase.from('catalog').select().ilike('name', `%${query}%`);
+    return guns;
+}

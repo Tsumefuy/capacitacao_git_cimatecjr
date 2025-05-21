@@ -1,4 +1,4 @@
-import { PortalGun } from "../actions";
+import { fetchGunsSearched, PortalGun } from "../actions";
 import { Box } from "../components/box";
 import { SearchBar } from "../components/searchBar";
 
@@ -9,7 +9,9 @@ export default async function Resultados({
  }) {
     const query = (await searchParams).query as string;
 
-    const noResults = true;
+    const guns = await fetchGunsSearched(query);
+
+    const noResults = !guns || guns.length === 0;
 
     if (noResults) {
         return (
@@ -38,11 +40,11 @@ export default async function Resultados({
                 </h1>
                 <div className="w-full flex justify-center">
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 w-full max-w-5xl">
-                        {/*guns.map((gun: PortalGun, index: number) => (
+                        {guns.map((gun: PortalGun, index: number) => (
                             <div key={index} className="flex justify-center">
                                 <Box data={gun} />
                             </div>
-                        ))*/}
+                        ))}
                     </div>
                 </div>
             </section>
