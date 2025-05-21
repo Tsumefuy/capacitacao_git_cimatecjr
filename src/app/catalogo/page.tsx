@@ -1,19 +1,18 @@
 import { Metadata } from "next";
+import { supabase } from '@/utils/supabase/server';
 import { Box } from "../components/box";
 import { SearchBar } from "../components/searchBar";
-import { PortalGun } from "@/app/actions";
+import { PortalGun } from "../actions";
 
 
 export const metadata: Metadata = {
     title: `Catálogo`,
   }
 
-export default async function Catalogo({ 
-  guns
-}: {
-  guns: PortalGun[]
-}) {
-    
+export default async function Catalogo() {
+
+    const { data: guns } = await supabase.from('catalog').select()
+
     return (
         <div className="flex flex-col items-center justify-center w-full px-4">
             <section className="mt-24 mb-12 w-full max-w-7xl text-center">
