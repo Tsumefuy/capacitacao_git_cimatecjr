@@ -1,4 +1,4 @@
-
+import { SearchBar } from "./components/searchBar";
 
 export default function Home() {
   const text = [
@@ -22,6 +22,7 @@ export default function Home() {
         <h1 className="text-4xl md:text-6xl font-bold text-primary tracking-wider md:tracking-widest">
           POUPE SEU TEMPO <br /> ADQUIRA SUA PORTAL GUN
         </h1>
+        <SearchBar/>
       </section>
       <section className="bg-neutral-950 w-full p-1">
         <h1 className="text-primary font-bold text-3xl tracking-wide md:tracking-widest mt-6">DESTAQUES</h1>
