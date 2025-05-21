@@ -3,6 +3,7 @@
 :root {
   --primary: #08C952;
   --secondary: #160440;
+  --background: #f2f2f2;
 }
 
 .text-primary {
@@ -10,7 +11,11 @@
 }
 
 .text-secondary {
-  coolor: var(--secondary);
+  color: var(--secondary);
+}
+
+.bg-color {
+  background: var(--background);
 }
 
 html, body {
