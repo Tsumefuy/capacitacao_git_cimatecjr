@@ -3,6 +3,7 @@ import "./globals.css";
 import { Tektur } from "next/font/google";
 
 import { Header } from "./components/header";
+import { Footer } from "./components/footer";
 
 const tektur = Tektur({ subsets: ["latin"], weight: ["400", "500", "600", "700"] });
 
@@ -28,6 +29,7 @@ export default function RootLayout({
       <body className={`${tektur.className} overflow-x-hidden`}>
         <Header/>
         {children}
+        <Footer/>
       </body>
     </html>
   );
